@@ -8,6 +8,7 @@ Group:		Development/Perl
 Summary:    Perl module to get ip address related info
 Source0:    http://search.cpan.org/CPAN/authors/id/B/BL/BLUELINES//%{realname}-%{version}.tar.bz2
 Url:		http://search.cpan.org/~bluelines/%{realname}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
 BuildArch:      noarch
 
