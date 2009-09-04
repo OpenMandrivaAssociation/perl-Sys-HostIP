@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:    1.3.1
-Release: %mkrel 4
+Release: %mkrel 5
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Perl module to get ip address related info
