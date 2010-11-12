@@ -1,29 +1,31 @@
-%define realname   Sys-HostIP
+%define upstream_name    Sys-HostIP
+%define upstream_version 1.7
 
-Name:		perl-%{realname}
-Version:    1.3.1
-Release: %mkrel 5
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Perl module to get ip address related info
-Source0:    http://search.cpan.org/CPAN/authors/id/B/BL/BLUELINES//%{realname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/~bluelines/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/~bluelines/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/B/BL/BLUELINES//%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:      noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Sys::HostIP does what it can to determine the ip address of your machine.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
