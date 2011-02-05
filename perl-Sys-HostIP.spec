@@ -1,5 +1,5 @@
 %define upstream_name    Sys-HostIP
-%define upstream_version 1.7
+%define upstream_version 1.81
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/~bluelines/%{upstream_name}
 Source0:    http://search.cpan.org/CPAN/authors/id/B/BL/BLUELINES//%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires: perl(Test::TinyMocker)
 BuildArch:      noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
