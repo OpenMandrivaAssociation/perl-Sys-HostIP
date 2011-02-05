@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/~bluelines/%{upstream_name}
 Source0:    http://search.cpan.org/CPAN/authors/id/B/BL/BLUELINES//%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Test::TinyMocker)
+BuildRequires: perl(Test::Exception)
 BuildArch:      noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
