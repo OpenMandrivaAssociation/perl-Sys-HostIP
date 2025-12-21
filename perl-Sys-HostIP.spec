@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/~bluelines/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/B/BL/BLUELINES//%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::TinyMocker)
 BuildRequires:	perl(Test::Exception)
