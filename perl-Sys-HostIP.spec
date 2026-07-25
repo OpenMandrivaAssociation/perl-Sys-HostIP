@@ -1,15 +1,15 @@
 %define upstream_name    Sys-HostIP
-%define upstream_version 1.81
+%define upstream_version 2.120
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Perl module to get ip address related info
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/~bluelines/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BL/BLUELINES//%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/xsawyerx/sys-hostip
+Source0:	https://cpan.metacpan.org/authors/id/X/XS/XSAWYERX/Sys-HostIP-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
